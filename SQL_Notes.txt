@@ -1,0 +1,124 @@
+1.What is Data?
+Ans: Data is a raw form of knowledge. Data can come in the form of text, observations, figures, images, numbers, graphs, or symbols. For example, data might include individual prices, weights, addresses, ages, names, temperatures, dates, or distances. When we process data we get information.
+2.What is a database?
+Ans: SQL database is a structured approach to storing data and performing operations using structured query language for data creation, modification & its organization. Using this approach the data can be easily controllable/ suitable format.
+
+There are 5 major types of databases:
+•Hierarchical: The data are organized into a tree-like structure.  It is developed by IBM in 1960. Ex: The IBM Information   Management System (IMS) and RDM Mobile
+•Network: A database organized according to ownership of records, Integrated Data Store (IDS), Integrated Data Store II (IDS II)
+•Object Oriented: information is represented in the form of objects, Ex: ObjectDB, db4o
+•Relational: A relational database is a type of database that stores and provides access to data points that are related to one another. Data is represented in tabular format.
+Each row in the table is a record with a unique ID called the key. The columns of the table hold attributes/ fields of the data
+•NoSQL:NoSQL databases (aka "not only SQL") are non-tabular databases and store data differently than relational tables. They store data in the form of document or key-value pair. Ex: MongoDB, Redis.
+
+4.What is DBMS?
+Database Management Systems (DBMS) are software systems used to store, retrieve, and run queries on data. A DBMS serves as an interface between an end-user and a database, allowing users to create, read, update, and delete data in the database.
+
+5.Advantages of Relational database:
+•Memory Management 
+•Data readiability
+•Scalabilty : handles large amount of data
+•Data indexing: faster retrieval of data
+•Data security
+
+6.RDBMS examples = MySQl,MS SQL server, Oracle,PostgreSQL, MariaDB
+7.MySQL: It is an open source (code that is designed to be publicly accessible—anyone can use), cross-platform RDBMS developed by Oracle that is based on SQL.
+8.Diffrence between SQL & MySQL : SQL is a query programming language that manages RDBMS where MySQL is a relational database management system that uses SQL.
+9. Query:It is a command or inquiry about set of data.
+
+10. Database & Schema: A database is the main container, it contains the data and log files, and all the schemas within it.
+Schemas are like folders within a database, and are mainly used to group logical objects together.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+SQL Commands:
+1. DDL – Data Definition Language
+2. DQL – Data Query Language
+3. DML – Data Manipulation Language
+4. DCL – Data Control Language
+5. TCL – Transaction Control Language
+
+DQL:
+• It is used to fetch data from table / db based on our requirement.
+• It contains only one query named “select”. 
+• Select command is used to select / retrieve attributes/ attribute based on some condition.
+• Select * from user;
+• Select name from user; 
+• Select name, id from user;
+Where Caluse:
+• The WHERE clause is used to filter records.
+• It is used to extract only those records that fulfill a specified condition.
+• for retrieving data according to some conditions
+
+Logical Operators:
+• The WHERE clause can be combined with AND, OR, and NOT operators.
+• The AND and OR operators are used to filter records based on more than one condition:
+• The AND operator displays a record if all the conditions separated by AND are TRUE.
+• The OR operator displays a record if any of the conditions separated by OR is TRUE.
+• The NOT operator displays a record if the condition(s) is NOT TRUE
+BETWEEN:
+• BETWEEN in SQL is a logical operator that is used to select a range of values from the database 
+table.
+• These values are used to define the range for validating the expression. The range is inclusive.
+
+IN Operator:
+• The IN operator allows you to specify multiple values in a WHERE clause.
+• The IN operator is a shorthand for multiple OR conditions, means It provides an easy way to 
+handle multiple OR conditions.
+
+Like Operator:
+• The SQL LIKE operator is used to retrieve the data in a column of a table, based on a specified 
+pattern.
+• It is used along with the WHERE clause of the UPDATE, DELETE and SELECT statements, to filter 
+the rows based on the given pattern. These patterns are specified using Wildcards.
+• Wildcards are special characters that can stand in for unknown characters in a text value .
+• the % is a wild card which represents zero, one or multiple characters. Ex: the 
+expression K% specifies that it will display the list of all the students whose name starts with ’K'.
+delete alter queries.
+Update:
+• MySQL UPDATE query is a DML statement used to modify the data of the MySQL 
+table within the database.
+• The UPDATE statement is used with the SET and WHERE clauses. The SET clause is 
+used to change the values of the specified column. We can update single or 
+multiple columns at a time.
+
+Constraints
+
+• Used to specify rules for the data in a table
+
+Not null
+• Ensures that a column cannot have a NULL value.
+
+UNIQUE
+• - Ensures that all values in a column are different.
+• Null values are allowed.
+
+Primary Key
+• The primary key constraint uniquely identifies each record in a table.
+• Primary keys must contain UNIQUE values, and cannot contain NULL 
+values.
+• A table can only have one primary key, but it can have multiple 
+unique constraints.
+
+AUTO_INCREMENT
+
+• The auto increment in SQL is a constraint that is applied to a field so that it can 
+automatically generate and provide a unique value to every record that you enter 
+into an SQL table.
+• This field is often used as the PRIMARY KEY column, where you need to provide a 
+unique value for every record you add.
+
+FOREIGN KEY Constraint
+
+• It is the field in one table that refers to the Primary key in another 
+table.
+
+
+
+• create table department(did int primary key, dname varchar(30));
+• create table employee(eid int primary key, ename varchar(30), 
+dept_id int, foreign key(dept_id) references department(did));
+
+	
+
